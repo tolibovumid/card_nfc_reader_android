@@ -10,10 +10,11 @@ Add it in your root build.gradle at the end of repositories:
   
   allprojects {
     repositories {
-    
-    ...
-    
-	  maven { url 'https://jitpack.io' }
+    ..
+	  maven { url 'https://jitpack.io' 
+	  
+	  	}
+	
 	}
 }
 
@@ -24,7 +25,7 @@ Add it in your root build.gradle at the end of repositories:
 ```gradle
   
 
-	         implementation 'com.github.FozilbekImomov:card_nfc_reader_android:Tag'
+implementation 'com.github.FozilbekImomov:card_nfc_reader_android:1.0.1'
 	
   
 ```
