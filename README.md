@@ -21,11 +21,8 @@ allprojects {
 ### Step 2. Add the dependency
 
 ```gradle
-  
-
-implementation 'com.github.FozilbekImomov:card_nfc_reader_android:1.0.1'
-	
-  
+//NFC
+implementation 'com.github.FozilbekImomov:card_nfc_reader_android:1.0.3'
 ```
 
 ### Step 3. Enable view binding
