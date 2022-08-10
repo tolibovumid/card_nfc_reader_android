@@ -7,7 +7,7 @@ def githubProperties = new Properties()
 githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
 
 def getVersionName = { ->
-    return "1.0.0"
+    return "1.0.1"
 }
 
 def getArtifactId = { ->
@@ -17,7 +17,7 @@ def getArtifactId = { ->
 publishing {
     publications {
         bar(MavenPublication) {
-            groupId 'uz.fozilbekimomov.card_nfc_reader_android'
+            groupId 'uz.fozilbekimomov.lite_lib'
             artifactId getArtifactId()
             version getVersionName()
             artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
