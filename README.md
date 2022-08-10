@@ -1,4 +1,14 @@
+#### If you enjoy my content, please consider supporting what I do. Thank you.
+
+[![](https://user-images.githubusercontent.com/36783954/183887369-a0565898-0ed7-4049-877a-c688503aad90.png)](https://www.buymeacoffee.com/fozilbekimomov)
+
+[By me a Coffee](https://www.buymeacoffee.com/fozilbekimomov)
+
+***
 [![](https://jitpack.io/v/FozilbekImomov/card_nfc_reader_android.svg)](https://jitpack.io/#FozilbekImomov/card_nfc_reader_android)
+
+
+
 
 To get a Git project into your build:
 
