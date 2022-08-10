@@ -20,9 +20,29 @@ allprojects {
 
 ### Step 2. Add the dependency
 
+Gradle:
+
 ```gradle
 //NFC
 implementation 'com.github.FozilbekImomov:card_nfc_reader_android:1.0.3'
+//Coroutines
+implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:latest-version'
+```
+Maven:
+
+```gradle
+<dependency>
+  <groupId>uz.fozilbekimomov.lite_lib</groupId>
+  <artifactId>card_nfc_reader_android</artifactId>
+  <version>1.0.3</version>
+</dependency>
+
+<dependency>
+    <groupId>org.jetbrains.kotlinx</groupId>
+    <artifactId>kotlinx-coroutines-core</artifactId>
+    <version>1.6.4</version>
+</dependency>
+
 ```
 
 ### Step 3. Enable view binding
