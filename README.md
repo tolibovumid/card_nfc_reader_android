@@ -45,32 +45,7 @@ Maven:
 
 ```
 
-### Step 3. Enable view binding
-
-In your  build.gradle app add below given codes
-
-```gradle
-
-
-android {
-  
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-
-    buildFeatures{
-        viewBinding true
-    }
-
-}
-
-```
-
-### Step 5. Add NFC permission in your project AndroidManifest.xml
+### Step 3. Add NFC permission in your project AndroidManifest.xml
 
 ```gradle
 
@@ -78,7 +53,7 @@ android {
 
 ```
 
-### Step 5. Modify your App Activity
+### Step 4. Modify your App Activity
 
 ```kotlin
 
