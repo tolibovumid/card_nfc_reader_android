@@ -42,9 +42,9 @@ Maven:
 
 ```gradle
 <dependency>
-	    <groupId>com.github.fozilbekimomov</groupId>
-	    <artifactId>card_nfc_reader_android</artifactId>
-	    <version>Tag</version>
+     <groupId>com.github.fozilbekimomov</groupId>
+     <artifactId>card_nfc_reader_android</artifactId>
+     <version>Tag</version>
 </dependency>
 
 <dependency>
