@@ -1,4 +1,14 @@
+#### If you enjoy my content, please consider supporting what I do. Thank you.
+
+[![](https://user-images.githubusercontent.com/36783954/183887369-a0565898-0ed7-4049-877a-c688503aad90.png)](https://www.buymeacoffee.com/fozilbekimomov)
+
+[By me a Coffee](https://www.buymeacoffee.com/fozilbekimomov)
+
+***
 [![](https://jitpack.io/v/FozilbekImomov/card_nfc_reader_android.svg)](https://jitpack.io/#FozilbekImomov/card_nfc_reader_android)
+
+
+
 
 To get a Git project into your build:
 
@@ -20,40 +30,32 @@ allprojects {
 
 ### Step 2. Add the dependency
 
-```gradle
-  
+Gradle:
 
-implementation 'com.github.FozilbekImomov:card_nfc_reader_android:1.0.1'
-	
-  
+```gradle
+//NFC
+implementation 'com.github.fozilbekimomov:card_nfc_reader_android:1.0.3'
+//Coroutines
+implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:latest-version'
 ```
-
-### Step 3. Enable view binding
-
-In your  build.gradle app add below given codes
+Maven:
 
 ```gradle
+<dependency>
+     <groupId>com.github.fozilbekimomov</groupId>
+     <artifactId>card_nfc_reader_android</artifactId>
+     <version>Tag</version>
+</dependency>
 
-
-android {
-  
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-
-    buildFeatures{
-        viewBinding true
-    }
-
-}
+<dependency>
+    <groupId>org.jetbrains.kotlinx</groupId>
+    <artifactId>kotlinx-coroutines-core</artifactId>
+    <version>1.6.4</version>
+</dependency>
 
 ```
 
-### Step 5. Add NFC permission in your project AndroidManifest.xml
+### Step 3. Add NFC permission in your project AndroidManifest.xml
 
 ```gradle
 
@@ -61,7 +63,7 @@ android {
 
 ```
 
-### Step 5. Modify your App Activity
+### Step 4. Modify your App Activity
 
 ```kotlin
 
