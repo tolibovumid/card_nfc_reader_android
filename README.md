@@ -5,8 +5,7 @@
 [By me a Coffee](https://www.buymeacoffee.com/fozilbekimomov)
 
 ***
-[![](https://jitpack.io/v/FozilbekImomov/card_nfc_reader_android.svg)](https://jitpack.io/#FozilbekImomov/card_nfc_reader_android)
-
+[![](https://jitpack.io/v/fozilbekimomov/card_nfc_reader_android.svg)](https://jitpack.io/#fozilbekimomov/card_nfc_reader_android)
 
 
 
