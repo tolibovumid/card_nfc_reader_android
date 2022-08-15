@@ -7,7 +7,7 @@ def githubProperties = new Properties()
 githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
 
 def getVersionName = { ->
-    return "1.0.1"
+    return "1.0.4"
 }
 
 def getArtifactId = { ->
@@ -17,10 +17,36 @@ def getArtifactId = { ->
 publishing {
     publications {
         bar(MavenPublication) {
-            groupId 'uz.fozilbekimomov.lite_lib'
+            groupId 'com.github.fozilbekimomov'
             artifactId getArtifactId()
             version getVersionName()
             artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
+            pom.withXml {
+                final dependenciesNode = asNode().appendNode('dependencies')
+                ext.addDependency = { Dependency dep, String scope ->
+                    if (dep.group == null || dep.version == null || dep.name == null || dep.name == "unspecified")
+                        return
+                    final dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', dep.group)
+                    dependencyNode.appendNode('artifactId', dep.name)
+                    dependencyNode.appendNode('version', dep.version)
+                    dependencyNode.appendNode('scope', scope)
+                    if (!dep.transitive) {
+                        final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                        exclusionNode.appendNode('groupId', '*')
+                        exclusionNode.appendNode('artifactId', '*')
+                    } else if (!dep.properties.excludeRules.empty) {
+                        final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                        dep.properties.excludeRules.each { ExcludeRule rule ->
+                            exclusionNode.appendNode('groupId', rule.group ?: '*')
+                            exclusionNode.appendNode('artifactId', rule.module ?: '*')
+                        }
+                    }
+                }
+                configurations.implementation.getDependencies().each { dep -> addDependency(dep, "implementation") }
+                configurations.implementation.getDependencies().each { dep -> addDependency(dep, "implementation") }
+                configurations.implementation.getDependencies().each { dep -> addDependency(dep, "runtime") }
+            }
         }
     }
 
@@ -66,7 +92,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.appcompat:appcompat:1.5.0'
     implementation 'androidx.core:core-ktx:1.8.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
