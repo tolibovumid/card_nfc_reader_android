@@ -34,7 +34,7 @@ Gradle:
 
 ```gradle
 //NFC
-implementation 'com.github.fozilbekimomov:card_nfc_reader_android:1.0.3'
+implementation 'com.github.fozilbekimomov:card_nfc_reader_android:1.0.4'
 //Coroutines
 implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:latest-version'
 ```
@@ -44,7 +44,7 @@ Maven:
 <dependency>
      <groupId>com.github.fozilbekimomov</groupId>
      <artifactId>card_nfc_reader_android</artifactId>
-     <version>Tag</version>
+     <version>1.0.4</version>
 </dependency>
 
 <dependency>
